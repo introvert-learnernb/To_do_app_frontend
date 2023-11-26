@@ -1,0 +1,638 @@
+/*=============== GOOGLE FONTS ===============*/
+@font-face {
+    font-family: 'DunbarTall-Bold';
+    src: url('assets\fonts\DunbarTall-Bold.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Bold.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Bold.woff2') format('woff2');
+
+    /* Add more formats if available */
+    /* Other font properties like font-weight and font-style can be added here */
+}
+
+@font-face {
+    font-family: 'DunbarTall-Book';
+    src: url('assets\fonts\DunbarTall-Book.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Book.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Book.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DunbarTall-ExtraBold';
+    src: url('assets\fonts\DunbarTall-ExtraBold.woff') format('woff'),
+        url('assets\fonts\DunbarTall-ExtraBold.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DunbarTall-ExtraLight';
+    src: url('assets\fonts\DunbarTall-ExtraLight.woff') format('woff'),
+        url('assets\fonts\DunbarTall-ExtraLight.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-ExtraLight.woff2') format('woff2');
+
+
+}
+
+@font-face {
+    font-family: 'DunbarTall-Hairline';
+    src: url('assets\fonts\DunbarTall-Hairline.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Hairline.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Hairline.woff2') format('woff2');
+
+
+}
+
+@font-face {
+    font-family: 'DunbarTall-Light';
+    src: url('assets\fonts\DunbarTall-Light.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Light.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Light.woff2') format('woff2');
+
+}
+
+@font-face {
+    font-family: 'DunbarTall-Medium';
+    src: url('assets\fonts\DunbarTall-Medium.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Medium.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Medium.woff2') format('woff2');
+
+}
+
+@font-face {
+    font-family: 'DunbarTall-Regular';
+    src: url('assets\fonts\DunbarTall-Regular.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Regular.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Regular.woff2') format('woff2');
+
+
+}
+
+@font-face {
+    font-family: 'DunbarTall-Ultra';
+    src: url('assets\fonts\DunbarTall-Ultra.woff') format('woff'),
+        url('assets\fonts\DunbarTall-Ultra.ttf') format('truetype'),
+        url('assets\fonts\DunbarTall-Ultra.woff2') format('woff2');
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+    /* Hex Color Mode*/
+    --body-color: #17191b;
+    --text-color-white: #fefefe;
+    --text-color-cyan: #2fd5da;
+
+
+    /*===== Font and Typography =====*/
+    --body-font: 'DunbarTall-Bold', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /*===== Font Weight =====*/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*===== Margenes Bottom =====*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*===== Z Index =====*/
+    --z-fixed: 10;
+    --z-modal: 100;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 2rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1.125rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DunbarTall-Bold', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*=============== BODY ===============*/
+body {
+    background-color: var(--body-color);
+}
+
+/*=============== TITLE ===============*/
+.container .title_container .title {
+    font-size: var(--biggest-font-size);
+
+    font-weight: 800;
+    color: var(--text-color-cyan);
+    text-align: center;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.container .title_container .title span {
+    color: var(--text-color-white);
+}
+
+
+/*=============== USER_INFO ===============*/
+.container .user_info_container {
+    margin-top: -2.5rem;
+    /* border:2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/*=============== USER_INFO_IMG ===============*/
+.user_img {
+    border: 3.5px solid white;
+    width: 4.75rem;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+}
+
+.user_info_container .user_image_container {
+    position: relative;
+}
+
+.user_info_container .user_image_container .task_completed_counter {
+    position: absolute;
+    background-color: var(--text-color-cyan);
+    top: 0.15rem;
+    right: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    z-index: 200;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*=============== USER_INFO_BUTTON ===============*/
+.container .user_info_container .create_button_container .create_btn {
+    border: 5.5px solid var(--text-color-cyan);
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 2.5rem;
+    background-color: transparent;
+    color: var(--text-color-cyan);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.container .user_info_container .create_button_container .create_btn i {
+    font-weight: 1200;
+}
+
+.container .user_info_container .create_button_container .create_btn:hover {
+    transform: scale(0.95);
+    font-size: calc(var(--h3-font-size)*0.95);
+}
+
+/*=============== MOTIVATIONAL_QUOTE_SECTION ===============*/
+
+.container .motivational_quote_container .quote {
+    color: var(--text-color-white);
+    font-family: 'DunbarTall-Book', sans-serif;
+    letter-spacing: .25rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-bottom: 4rem;
+    font-size: var(--h3-font-size);
+}
+
+
+/*=============== FOCUS TASK SECTION ===============*/
+.container .focus_task_container {
+    margin: auto;
+    width: 55%;
+    background-color: var(--text-color-cyan);
+    padding: 2rem 5rem;
+    border-radius: 2.5rem;
+    position: relative;
+    margin-bottom: 4rem;
+
+}
+
+.container .focus_task_container .upper_focus_header {
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    background-color: var(--body-color);
+    color: var(--text-color-white);
+    font-weight: 700;
+    font-size: var(--h2-font-size);
+    padding: 0.5rem 0.75rem;
+    border-radius: 2.5rem;
+    margin-left: -4rem;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"] {
+    display: none;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"]+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"]+label::before {
+    content: '';
+    position: absolute;
+    top: -0.2rem;
+    background-color: transparent;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: .25rem solid var(--body-color);
+    border-radius: .65rem;
+    transition: all 0.3s ease-in;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"]+label::after {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 1.25rem;
+    width: 10px;
+    /* Width of the checkmark */
+    height: 25px;
+    /* Height of the checkmark */
+    border-style: solid;
+    border-width: 0 6px 6px 0;
+    border-color: white;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+.container .focus_task_container .focus_body input[type="checkbox"]:checked+label::before {
+    border-color: var(--text-color-white);
+}
+
+.container .focus_task_container .focus_text {
+    padding-left: 5rem;
+    font-size: var(--h1-font-size);
+    font-weight: 600;
+    /* border:2px solid red; */
+}
+
+/*=============== NORMAL TASK SECTION ===============*/
+
+.container .queue_task_container .task_item {
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 38%;
+    min-width: 350px;
+    background-color: #212224;
+    padding: 1rem 2.5rem;
+    border-radius: 2.5rem;
+    position: relative;
+}
+
+
+.container .queue_task_container .task_item input[type="checkbox"] {
+    display: none;
+}
+
+.container .queue_task_container .task_item input[type="checkbox"]+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .queue_task_container .task_item input[type="checkbox"]+label::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    border: .25rem solid var(--text-color-cyan);
+    border-radius: .45rem;
+    transition: all 0.3s ease-in;
+}
+
+.container .queue_task_container .task_item input[type="checkbox"]:checked+label::before {
+    border-color: var(--text-color-white);
+}
+
+.container .queue_task_container .task_item input[type="checkbox"]+label::after {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0.95rem;
+    width: 8px;
+    /* Width of the checkmark */
+    height: 15px;
+    /* Height of the checkmark */
+    border-style: solid;
+    border-width: 0 4px 4px 0;
+    border-color: white;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.container .queue_task_container .task_item input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+.container .queue_task_container .task_text {
+    margin-top: 1rem;
+    color: var(--text-color-white);
+    padding-left: 5rem;
+    font-size: calc(var(--h3-font-size)*1.15);
+    font-weight: 400;
+    /* border:2px solid red; */
+}
+
+
+/*============== MODAL =============== */
+.modal_div .search-container {
+    z-index: 5000;
+    width: 100vw;
+    border: 2px solid red;
+    /* max-width:500px; */
+    height: 100vh;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+}
+
+.modal_div .search-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    /* Adjust the color and opacity */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur value */
+    z-index: -1;
+}
+
+/* .search-container {
+    max-width:400px;
+    width: 100%;
+    
+  } */
+
+.wrapper {
+    height: 40px;
+    max-width: 480px;
+    /* background-color: red; */
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+/* Style for the search input */
+.wrapper .search-input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: #fff;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+/* Style for the search button */
+.search-button {
+    z-index: 20;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 50px;
+    background: var(--text-color-cyan);
+    height: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 0 25px 25px 0;
+}
+
+.search-button a {
+    text-decoration: none;
+    color: var(--body-color);
+}
+
+
+
+/* Style for the search button icon (using Font Awesome) */
+.fa-search {
+    font-size: 16px;
+}
+
+
+/* Style for the search button on hover */
+.search-button:hover {
+    color: var(--black);
+    background-color: #1febeb;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .container .focus_task_container {
+        padding: 1rem 2rem;
+        width: 600px;
+    }
+
+    .container .focus_task_container .focus_body input[type="checkbox"]+label::before {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: .35rem;
+    }
+
+
+    .container .queue_task_container .task_item input[type="checkbox"]+label::before {
+        border: 0.15rem solid var(--text-color-cyan);
+    }
+
+
+    .container .focus_task_container .focus_text {
+        padding-left: 3rem;
+
+    }
+
+
+    .container .queue_task_container .task_item {
+        padding: 0.75rem 1.5rem;
+        min-width: 400px;
+    }
+
+    .container .queue_task_container .task_item input[type="checkbox"]+label::before {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: .25rem;
+    }
+
+    .container .queue_task_container .task_item input[type="checkbox"]+label::after {
+        top: -0.75rem;
+        left: 0.5rem;
+        width: 6px;
+        /* Width of the checkmark */
+        height: 12px;
+        /* Height of the checkmark */
+    }
+
+    .container .focus_task_container .focus_body input[type="checkbox"]+label::after {
+        top: 0rem;
+        left: 0.8rem;
+        width: 6px;
+        height: 19px;
+    }
+
+
+    .container .queue_task_container .task_text {
+        padding-left: 3rem;
+        margin-top: 0.65rem;
+    }
+
+}
+
+@media screen and (max-width: 647px) {
+
+    .user_info_container .user_image_container,
+    .container .user_info_container .create_button_container .create_btn {
+        margin-top: 2rem;
+    }
+
+    /* Focus task item */
+    .container .focus_task_container {
+        width: 80%;
+    }
+
+    .user_img {
+        width: 4rem;
+    }
+
+
+    /* Create btn */
+    .container .user_info_container .create_button_container .create_btn {
+        font-size: calc(var(--h3-font-size)*0.75);
+    }
+
+    .wrapper {
+        max-width: 320px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .container .user_info_container {
+        padding: 0 0.5rem;
+    }
+
+    .container .user_info_container {
+        position: absolute;
+        top: 0.75rem;
+    }
+
+
+    .container .title_container .title {
+        margin-top: 6rem;
+    }
+
+    /* Focus task item */
+    .container .focus_task_container {
+        width: 80%;
+    }
+
+    .container .focus_task_container .focus_text {
+        font-size: calc(var(--h1-font-size)*0.9);
+    }
+
+    /* Normal Task Container  */
+
+    .container .queue_task_container .task_item {
+
+        min-width: 300px;
+
+    }
+
+    .container .queue_task_container .task_text {
+        font-size: calc(var(--h3-font-size)*0.75);
+
+    }
+
+
+    /* User image */
+    .user_img {
+        margin-top: 0.5rem;
+        width: 4rem;
+    }
+
+    .container .motivational_quote_container .quote {
+        padding-top: 0.75rem;
+        letter-spacing: .15rem;
+    }
+
+    /* Create btn */
+    .container .user_info_container .create_button_container .create_btn {
+        font-size: calc(var(--h3-font-size)*0.6);
+    }
+
+
+}
