@@ -26,11 +26,11 @@
                 <div class="user_image_container">
                     <img src="assets/img/nb.jpg" alt="user_img" class="user_img">
                     <div class="task_completed_counter">
-                        +3
+                        +<span id="counter">0</span>
                     </div>
                 </div>
                 <div class="create_button_container">
-                    <button class="create_btn">
+                    <button class="create_btn" id="create_btn">
                         <i class="fa-solid fa-plus fa-lg"></i> CREATE
                     </button>
                 </div>
@@ -38,30 +38,30 @@
             <div class="motivational_quote_container">
                 <h2 class="quote">"Consistency enlarges ability."</h2>
             </div>
-            <div class="focus_task_container">
+            <div class="focus_task_container" id="focus_task_div">
                 <div class="upper_focus_header">
                     IN FOCUS
                 </div>
                 <div class="focus_body">
                     <input type="checkbox" name="" id="mycheckbox">
-                    <label for="mycheckbox"></label>
+                    <label for="mycheckbox" class="check_label"></label>
                     <div class="focus_text">Title of the task to be completed.</div>
                 </div>
             </div>
             <div class="queue_task_container">
                 <div class="task_item">
                     <input type="checkbox" name="" id="mycheckbox1">
-                    <label for="mycheckbox1"></label>
+                    <label for="mycheckbox1" class="check_label"></label>
                     <div class="task_text">Title of the task to be completed.</div>
                 </div>
                 <div class="task_item">
                     <input type="checkbox" name="" id="mycheckbox2">
-                    <label for="mycheckbox2"></label>
+                    <label for="mycheckbox2" class="check_label"></label>
                     <div class="task_text">Title of the task to be completed.</div>
                 </div>
                 <div class="task_item">
                     <input type="checkbox" name="" id="mycheckbox3">
-                    <label for="mycheckbox3"></label>
+                    <label for="mycheckbox3" class="check_label"></label>
                     <div class="task_text">Title of the task to be completed.</div>
                 </div>
                 <!-- <div class="task_item">
@@ -71,10 +71,10 @@
                 </div> -->
             </div>
             <div class="modal_div">
-                <form action="/submit" method="post" class="search-container">
+                <form  method="post" class="search-container" id="form_modal">
                     <div class="wrapper">
-                        <input class="search-input" type="text" name="location" placeholder="Enter your task">
-                        <button class="search-button" type="submit">
+                        <input class="search-input" type="text" name="location" placeholder="Enter your task" id="textInput">
+                        <button class="search-button" type="submit" id="plus_btn">
                             <a>
                                 <i class="fa-solid fa-plus fa-lg"></i>
                             </a>
@@ -86,7 +86,7 @@
     </main>
 
     <!-- linking with js  -->
-    <script src="index.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

@@ -314,7 +314,8 @@ body {
     border-color: var(--text-color-white);
 }
 
-.container .focus_task_container .focus_text {
+.container .focus_task_container .focus_text, 
+.container .focus_task_container .task_text {
     padding-left: 5rem;
     font-size: var(--h1-font-size);
     font-weight: 600;
@@ -398,7 +399,7 @@ body {
 .modal_div .search-container {
     z-index: 5000;
     width: 100vw;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* max-width:500px; */
     height: 100vh;
     border-radius: 0.25rem;
@@ -406,7 +407,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
     /* background-color: white; */
+}
+
+.modal_div .search-container.appear {
+    display: block;
+}
+
+.modal_div .search-container.clicked {
+    display:none;
 }
 
 .modal_div .search-container::before {
@@ -418,16 +428,11 @@ body {
     bottom: 0;
     background: rgba(255, 255, 255, 0.1);
     /* Adjust the color and opacity */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     /* Adjust the blur value */
     z-index: -1;
 }
 
-/* .search-container {
-    max-width:400px;
-    width: 100%;
-    
-  } */
 
 .wrapper {
     height: 40px;
@@ -475,8 +480,6 @@ body {
     text-decoration: none;
     color: var(--body-color);
 }
-
-
 
 /* Style for the search button icon (using Font Awesome) */
 .fa-search {
